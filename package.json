@@ -1,0 +1,28 @@
+{
+    "name": "example-forge-bot",
+    "version": "1.0.0",
+    "description": "An example bot made using the Forge Bot Framework",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "npm run build && node dist/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cloudrex/example-forge-bot.git"
+    },
+    "keywords": [],
+    "author": "CloudRex <cloudrex@outlook.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cloudrex/example-forge-bot/issues"
+    },
+    "homepage": "https://github.com/cloudrex/example-forge-bot#readme",
+    "dependencies": {
+        "dotenv": "^6.1.0",
+        "forge": "git://github.com/cloudrex/forge.git#master"
+    },
+    "devDependencies": {
+        "typescript": "^3.1.3"
+    }
+}
