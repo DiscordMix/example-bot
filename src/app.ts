@@ -2,6 +2,7 @@
 require("dotenv").config();
 
 import {Bot} from "forge";
+import path from "path";
 
 // NOTE: There will be an error could not create dir, ignore it; it's an unfixed bug.
 
@@ -14,8 +15,8 @@ async function init(): Promise<void> {
             },
 
             paths: {
-                commands: process.env.COMMANDS_DIR as string,
-                services: process.env.SERVICES_DIR as string,
+                commands: path.join(__dirname, process.env.COMMANDS_DIR as string),
+                services: path.join(__dirname, process.env.SERVICES_DIR as string),
                 plugins: "", // Ignore this
                 emojis: "" // Ignore this
             },
