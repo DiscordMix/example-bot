@@ -1,4 +1,4 @@
-import {Command, CommandContext, RestrictGroup} from "forge";
+import {Command, CommandContext} from "forge";
 
 export default class TestCommand extends Command {
     readonly meta = {

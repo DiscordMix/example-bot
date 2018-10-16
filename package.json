@@ -19,8 +19,7 @@
     },
     "homepage": "https://github.com/cloudrex/example-forge-bot#readme",
     "dependencies": {
-        "dotenv": "^6.1.0",
-        "forge": "git://github.com/cloudrex/forge.git#master"
+        "dotenv": "^6.1.0"
     },
     "devDependencies": {
         "typescript": "^3.1.3"
