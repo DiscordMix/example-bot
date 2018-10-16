@@ -9,15 +9,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/cloudrex/example-forge-bot.git"
+        "url": "git+https://github.com/discord-forge/example-forge-bot.git"
     },
     "keywords": [],
     "author": "CloudRex <cloudrex@outlook.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/cloudrex/example-forge-bot/issues"
+        "url": "https://github.com/discord-forge/example-forge-bot/issues"
     },
-    "homepage": "https://github.com/cloudrex/example-forge-bot#readme",
+    "homepage": "https://github.com/discord-forge/example-forge-bot#readme",
     "dependencies": {
         "dotenv": "^6.1.0"
     },
