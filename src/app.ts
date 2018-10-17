@@ -1,7 +1,7 @@
 // Environment Variables (defined in .env)
 require("dotenv").config();
 
-import {Bot} from "forge";
+import {Bot} from "@cloudrex/forge";
 import path from "path";
 
 // NOTE: There will be an error could not create dir, ignore it; it's an unfixed bug.
