@@ -4,14 +4,17 @@
     "description": "An example bot made using the Forge Bot Framework",
     "main": "index.js",
     "scripts": {
-        "build": "tsc",
-        "start": "npm run build && node dist/app.js"
+        "start": "npm run build && node dist/app.js",
+        "build": "tsc"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/discord-forge/example-forge-bot.git"
     },
-    "keywords": [],
+    "keywords": [
+        "discord",
+        "discord-bot"
+    ],
     "author": "CloudRex <cloudrex@outlook.com>",
     "license": "MIT",
     "bugs": {
@@ -19,6 +22,7 @@
     },
     "homepage": "https://github.com/discord-forge/example-forge-bot#readme",
     "dependencies": {
+        "@cloudrex/forge": "^1.0.1",
         "dotenv": "^6.1.0"
     },
     "devDependencies": {
