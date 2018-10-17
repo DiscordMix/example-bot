@@ -1,6 +1,7 @@
 import {Command, CommandContext} from "@cloudrex/forge";
 
 export default class TestCommand extends Command {
+    // Basic information about the bot
     readonly meta = {
         name: "hello",
         description: "Say hello world!"
@@ -14,8 +15,8 @@ export default class TestCommand extends Command {
     };
 
     public async executed(context: CommandContext): Promise<void> {
-        context.ok("Hello world!"); // Success embed
-        context.fail("Hello world!"); // Failure embed (auto-deletes; time depends on the message length)
+        await context.ok("Hello world!"); // Success embed
+        await context.fail("Hello world!"); // Failure embed (auto-deletes; time depends on the message length)
 
         // ... and some more which I will document in the future!
     }
