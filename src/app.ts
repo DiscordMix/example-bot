@@ -30,9 +30,6 @@ async function init(): Promise<void> {
         owner: process.env.OWNER_ID
     });
 
-    // Setup the bot (internal stuff)
-    await bot.setup();
-
     // Start the bot!
     await bot.connect();
 }
