@@ -12,13 +12,13 @@ let source = fs.existsSync(".env") ? ".env" : ".env.example";
 async function start() {
     console.log("\n\tPlease provide basic required information for your bot.\n\tDon't worry, you can change the configuration again later.\n");
 
-    const token = await input.text("Token", {
+    const token = await input.password("Token", {
         validate(token) {
             return Patterns.token.test(token);
         }
     });
     
-    const prefix = await input.text("Command Prefix", {
+    const prefix = await input.text("Prefix", {
         default: "!"
     });
 
