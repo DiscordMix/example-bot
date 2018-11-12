@@ -7,7 +7,7 @@ import fs from "fs";
 
 // Verify that .env file exists
 if (!fs.existsSync(".env")) {
-    console.log("Hold up! You haven't created the .env file. Copy the .env.example to .env and configure the bot first.");
+    console.log("Hold up! Your bot isn't configured. Run 'npm run config' to configure it.");
     process.exit(0);
 }
 
