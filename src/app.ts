@@ -3,6 +3,13 @@ require("dotenv").config();
 
 import {Bot, Settings} from "@cloudrex/forge";
 import path from "path";
+import fs from "fs";
+
+// Verify that .env file exists
+if (!fs.existsSync(".env")) {
+    console.log("Hold up! You haven't created the .env file. Copy the .env.example to .env and configure the bot first.");
+    process.exit(0);
+}
 
 async function init(): Promise<void> {
     const bot: Bot = new Bot({
