@@ -6,7 +6,8 @@
     "scripts": {
         "start": "npm run build && node dist/app.js",
         "build": "tsc",
-        "config": "node tasks/configure.js"
+        "config": "node tasks/configure.js",
+        "postinstall": "npm run config"
     },
     "repository": {
         "type": "git",
