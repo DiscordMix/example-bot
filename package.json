@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "start": "npm run build && node dist/app.js",
-        "build": "tsc"
+        "build": "tsc",
+        "config": "node tasks/configure.js",
+        "postinstall": "npm run config"
     },
     "repository": {
         "type": "git",
@@ -26,6 +28,7 @@
         "dotenv": "^6.1.0"
     },
     "devDependencies": {
+        "input": "^1.0.1",
         "typescript": "^3.1.3"
     }
 }
