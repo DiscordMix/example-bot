@@ -4,8 +4,6 @@ require("dotenv").config();
 import {Bot} from "@cloudrex/forge";
 import path from "path";
 
-// NOTE: There will be an error could not create dir, ignore it; it's an unfixed bug.
-
 async function init(): Promise<void> {
     const bot: Bot = new Bot({
         settings: {
@@ -16,15 +14,8 @@ async function init(): Promise<void> {
 
             paths: {
                 commands: path.join(__dirname, process.env.COMMANDS_DIR as string),
-                services: path.join(__dirname, process.env.SERVICES_DIR as string),
-                plugins: "", // Ignore this
-                emojis: "" // Ignore this
+                services: path.join(__dirname, process.env.SERVICES_DIR as string)
             },
-
-            keys: {
-                bfd: undefined, // Ignore this
-                dbl: undefined // Ignore this
-            }
         },
 
         owner: process.env.OWNER_ID
