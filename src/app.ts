@@ -5,9 +5,9 @@ import {Bot, Settings} from "@cloudrex/forge";
 import path from "path";
 import fs from "fs";
 
-// Verify that .env file exists
+// Verify that .env file exists (bot configuration)
 if (!fs.existsSync(".env")) {
-    console.log("Hold up! Your bot isn't configured. Run 'npm run config' to configure it.");
+    console.log("Hold up! Your bot isn't configured. Run 'npm run config' to configure it. Alternatively, you can configure the .env file manually.");
     process.exit(0);
 }
 
@@ -28,7 +28,7 @@ async function init(): Promise<void> {
         owner: process.env.OWNER_ID
     });
 
-    // Start the bot!
+    // Connect and start the bot
     await bot.connect();
 }
 

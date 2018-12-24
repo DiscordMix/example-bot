@@ -1,23 +1,20 @@
 import {Command, CommandContext} from "@cloudrex/forge";
 
-export default class TestCommand extends Command {
-    // Basic information about the bot
+export default class HelloCommand extends Command {
+    // Basic information about this command
     readonly meta = {
         name: "hello",
-        description: "Say hello world!"
+        description: "Say hello world"
     };
 
     readonly restrict: any = {
-        // specific: [RestrictGroup.ServerModerator] Only want people with MANAGE_MESSAGES perms to use it?
-        cooldown: 5, // Must wait 5 seconds! (per-user)
-        
-        // ... and some other properties which I will document in the future
+        cooldown: 3 // Must wait 3 seconds between executions (per-user)
     };
 
     public async executed(context: CommandContext): Promise<void> {
-        await context.ok("Hello world!"); // Success embed
-        await context.fail("Hello world!"); // Failure embed (auto-deletes; time depends on the message length)
+        await context.ok("Hello world"); // Success embed
+        await context.fail("Hello world"); // Failure embed (auto-deletes; time depends on the message length)
 
-        // ... and some more which I will document in the future!
+        // ... and some more which I will document in the future
     }
 };

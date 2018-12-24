@@ -10,7 +10,7 @@ if (!fs.existsSync(".env.example") && !fs.existsSync(".env")) {
 let source = fs.existsSync(".env") ? ".env" : ".env.example";
 
 async function start() {
-    console.log("\n\tPlease provide basic required information for your bot.\n\tDon't worry, you can change the configuration again later.\n");
+    console.log("\n\tPlease provide basic required information for your bot.\n\tDon't worry, you can change the configuration again later.\n\tYou can skip this process by pressing CTRL + C in your keyboard.\n");
 
     const token = await input.password("Token", {
         validate(token) {
