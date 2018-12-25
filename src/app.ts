@@ -4,7 +4,7 @@ require("dotenv").config();
 import path from "path";
 import fs from "fs";
 import {StoreActionType, LogReducer, IState} from "./store";
-import {Bot, Settings, Command, CommandContext, Log, IStoreAction} from "@cloudrex/forge";
+import {Bot, Settings, Command, CommandContext, Log} from "@cloudrex/forge";
 import {EBotEvents} from "@cloudrex/forge/dist/core/bot";
 
 // Verify that .env file exists (bot configuration)

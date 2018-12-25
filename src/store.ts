@@ -15,18 +15,18 @@ export interface IState {
 }
 
 // Our log reducer, responsible for updating the state upon dispatched actions
-export const LogReducer: Reducer<IState> = (action: IStoreAction<any>, state?: IState): IState | null => {
+export const LogReducer: Reducer<IState> = (action: IStoreAction<ICommandLog | any>, state?: IState): IState | null => {
     if (action.type === StoreActionType.LogCommand) {
         if (state === undefined) {
             return {
                 commandLogs: [action.payload]
-            };
+            } as any;
         }
         else {
             return {
                 ...state,
-                commandLogs: [...state.commandLogs, action.payload]
-            };
+                commandLogs: [...(state as any).commandLogs, action.payload]
+            } as any;
         }
     }
 
