@@ -2,7 +2,7 @@
     "name": "example-forge-bot",
     "version": "1.0.0",
     "description": "A template bot to get you started using the Forge Bot Framework",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
         "start": "npm run build && node dist/app.js",
         "build": "tsc",
