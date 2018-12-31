@@ -4,8 +4,8 @@ require("dotenv").config();
 import path from "path";
 import fs from "fs";
 import {StoreActionType, LogReducer, IState} from "./store";
-import {Bot, Settings, Command, CommandContext, Log} from "@cloudrex/forge";
-import {EBotEvents} from "@cloudrex/forge/dist/core/bot";
+import {Bot, Settings, Command, Context, Log} from "@cloudrex/forge";
+import {EBotEvents} from "@cloudrex/forge/dist/core/bot-extra";
 
 // Verify that .env file exists (bot configuration)
 if (!fs.existsSync(".env")) {
@@ -37,7 +37,7 @@ async function init(): Promise<void> {
     bot.store.addReducer(LogReducer);
 
     // Dispatch log event upon command execution
-    bot.on(EBotEvents.CommandExecuted, (command: Command, context: CommandContext) => {
+    bot.on(EBotEvents.CommandExecuted, (command: Command, context: Context) => {
         bot.store.dispatch(StoreActionType.LogCommand, {
             command: command.meta.name,
             user: context.sender.tag,

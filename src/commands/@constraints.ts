@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, ChatEnvironment, RestrictGroup} from "@cloudrex/forge";
+import {Command, Context, Permission, ChatEnvironment, RestrictGroup} from "@cloudrex/forge";
 
 // Note: This command will not be loaded by Forge (as instructed by the leading @) and only serves example purposes.
 
@@ -9,7 +9,7 @@ export default class ConstraintsCommand extends Command {
         description: "Example use of command constraints"
     };
 
-    readonly restrict: any = {
+    readonly constraints: any = {
         cooldown: 3, // Cooldown between executions (per-user)
         selfPermissions: [Permission.SendMessages], // Permission(s) required by the bot
         issuerPermissions: [Permission.ManageMessages], // Permission(s) required by the executer
@@ -17,7 +17,7 @@ export default class ConstraintsCommand extends Command {
         specific: [RestrictGroup.BotOwner] // Limit command to the bot owner
     };
 
-    public async executed(context: CommandContext): Promise<void> {
+    public async run(context: Context): Promise<void> {
         return;
     }
 };
