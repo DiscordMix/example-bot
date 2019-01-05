@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs";
 import {StoreActionType, LogReducer, IState} from "./store";
 import {Bot, Settings, Command, Context, Log, EBotEvents} from "@cloudrex/forge";
+import {Env} from "./defs";
 
 // Verify that .env file exists (bot configuration)
 if (!fs.existsSync(".env")) {
@@ -12,20 +13,22 @@ if (!fs.existsSync(".env")) {
     process.exit(0);
 }
 
+const env: Env = process.env as any;
+
 const bot: Bot = new Bot<IState, StoreActionType>({
     settings: new Settings({
         general: {
-            prefixes: [process.env.PREFIX] as string[],
-            token: process.env.TOKEN as string,
+            prefixes: [env.PREFIX],
+            token: env.TOKEN,
         },
 
         paths: {
-            commands: path.join(__dirname, process.env.COMMANDS_DIR as string),
-            services: path.join(__dirname, process.env.SERVICES_DIR as string)
+            commands: path.join(__dirname, env.COMMANDS_DIR),
+            services: path.join(__dirname, env.SERVICES_DIR)
         }
     }),
 
-    owner: process.env.OWNER_ID
+    owner: env.OWNER_ID
 });
 
 // BONUS: Log commands using the store
