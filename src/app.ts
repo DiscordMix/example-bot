@@ -18,7 +18,7 @@ const env: Env = process.env as any;
 const bot: Bot = new Bot<IState, StoreActionType>({
     settings: new Settings({
         general: {
-            prefixes: [env.PREFIX],
+            prefix: [env.PREFIX],
             token: env.TOKEN,
         },
 
