@@ -1,5 +1,4 @@
-import {Command, Context, Permission, ChatEnv, RestrictGroup, Name, Description} from "@cloudrex/forge";
-import {Constraints} from "@cloudrex/forge/dist/decorators/constraints";
+import {Command, Context, Permission, ChatEnv, RestrictGroup, Name, Description, Constraints} from "d.mix";
 
 // Note: This command will not be loaded by Forge (as instructed by the leading .) and only serves example purposes.
 
@@ -13,7 +12,7 @@ import {Constraints} from "@cloudrex/forge/dist/decorators/constraints";
     specific: [RestrictGroup.BotOwner] // Limit command to the bot owner
 })
 export default class ConstraintsCommand extends Command {
-    public async run(context: Context): Promise<void> {
+    public async run($: Context): Promise<void> {
         //
     }
 };

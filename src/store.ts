@@ -1,4 +1,4 @@
-import {Reducer, IStoreAction} from "@cloudrex/forge";
+import {Reducer, IStoreAction} from "d.mix";
 
 export enum StoreActionType {
     LogCommand
