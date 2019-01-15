@@ -1,7 +1,7 @@
 {
-    "name": "example-forge-bot",
+    "name": "example-mix-bot",
     "version": "1.0.0",
-    "description": "A template bot to get you started using the Forge Bot Framework",
+    "description": "A template bot to get you started using the Mix bot framework",
     "main": "dist/index.js",
     "scripts": {
         "start": "npm run build && node dist/app.js",
@@ -10,20 +10,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/discord-forge/example-forge-bot.git"
+        "url": "git+https://github.com/discord-mix/example-bot.git"
     },
     "keywords": [
         "discord",
         "discord-bot"
     ],
-    "author": "CloudRex <cloudrex@outlook.com>",
+    "author": "Atlas <cloudrex@outlook.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/discord-forge/example-forge-bot/issues"
+        "url": "https://github.com/discord-mix/example-bot/issues"
     },
-    "homepage": "https://github.com/discord-forge/example-forge-bot#readme",
+    "homepage": "https://github.com/discord-mix/example-bot#readme",
     "dependencies": {
-        "@cloudrex/forge": "^1.2.5-beta.13",
+        "d.mix": "^1.2.5",
         "dotenv": "^6.1.0"
     },
     "devDependencies": {
