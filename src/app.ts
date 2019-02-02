@@ -1,4 +1,4 @@
-// Environment Variables (defined in .env)
+// Load environment variables from the .env file.
 require("dotenv").config();
 
 import path from "path";
@@ -6,7 +6,7 @@ import fs from "fs";
 import {Bot, Settings} from "d.mix";
 import {Env} from "./defs";
 
-// Verify that .env file exists (bot configuration)
+// Verify that .env file exists (bot configuration).
 if (!fs.existsSync(".env")) {
     console.log("Hold up! Your bot isn't configured. Run 'npm run config' to configure it. Alternatively, you can configure the .env file manually.");
     process.exit(0);
@@ -30,5 +30,5 @@ const bot: Bot = new Bot({
     owner: env.OWNER_ID
 });
 
-// Connect and start the bot
+// Connect and start the bot.
 bot.connect();

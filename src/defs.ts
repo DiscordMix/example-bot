@@ -1,5 +1,8 @@
 import {Snowflake} from "discord.js";
 
+/**
+ * These variables reflect the configuration from the .env file.
+ */
 export interface Env {
     readonly TOKEN: string;
     readonly OWNER_ID: Snowflake;
