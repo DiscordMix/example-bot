@@ -1,6 +1,8 @@
+// This script allows you to easily configure your bot when you run 'npm run config'.
+
 const input = require("input");
 const fs = require("fs");
-const {Patterns} = require("@cloudrex/forge");
+const {Patterns} = require("d.mix");
 
 if (!fs.existsSync(".env.example") && !fs.existsSync(".env")) {
     console.log("Seems like the project is corrupt, try downloading a fresh copy! (.env.example is missing)");
@@ -17,7 +19,7 @@ async function start() {
             return Patterns.token.test(token);
         }
     });
-    
+
     const prefix = await input.text("Prefix", {
         default: "!"
     });
