@@ -3,8 +3,7 @@ require("dotenv").config();
 
 import path from "path";
 import fs from "fs";
-import {StoreActionType, LogReducer, IState} from "./store";
-import {Bot, Settings, Command, Context, Log, EBotEvents} from "d.mix";
+import {Bot, Settings} from "d.mix";
 import {Env} from "./defs";
 
 // Verify that .env file exists (bot configuration)
@@ -15,7 +14,7 @@ if (!fs.existsSync(".env")) {
 
 const env: Env = process.env as any;
 
-const bot: Bot = new Bot<IState, StoreActionType>({
+const bot: Bot = new Bot({
     settings: new Settings({
         general: {
             prefix: [env.PREFIX],
@@ -29,20 +28,6 @@ const bot: Bot = new Bot<IState, StoreActionType>({
     }),
 
     owner: env.OWNER_ID
-});
-
-// BONUS: Log commands using the store
-bot.store.addReducer(LogReducer);
-
-// Dispatch log event upon command execution
-bot.on(EBotEvents.CommandExecuted, (command: Command, context: Context) => {
-    bot.store.dispatch(StoreActionType.LogCommand, {
-        command: command.meta.name,
-        user: context.sender.tag,
-        time: Date.now()
-    });
-
-    Log.info(`Command '${command.meta.name}' was executed by '${context.sender.tag}'`);
 });
 
 // Connect and start the bot

@@ -37,15 +37,15 @@ async function start() {
         fs.copyFileSync(source, ".env");
     }
 
-    // Read
+    // Read .env file.
     let data = fs.readFileSync(".env").toString();
 
-    // Replace data
+    // Replace data.
     data = data.replace(/^TOKEN="?[^"]*"?$/gm, `TOKEN="${token}"`);
     data = data.replace(/^PREFIX="?[^"]*"?$/gm, `PREFIX="${prefix}"`);
     data = data.replace(/^OWNER_ID="?[^"]*"?$/gm, `OWNER_ID="${owner}"`);
 
-    // Write
+    // Write & save .env file.
     fs.writeFileSync(source, data);
 
     console.log("\n\tYou're all set! Run 'npm start' to start the bot.\n\tYou can always change the configuration of this bot using 'npm run config'\n")
