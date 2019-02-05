@@ -1,4 +1,4 @@
-This is a bot template to get you started with using The Forge Bot Framework. It is automatically cloned using [Mix CLI](https://github.com/discord-mix/mix-cli).
+This is a bot template to get you started with using Mix. It is automatically cloned using [Mix CLI](https://github.com/discord-mix/mix-cli).
 
 If you have any questions, refer to [my Discord support server](https://discord.gg/kmFDMwT) to contact me.
 
