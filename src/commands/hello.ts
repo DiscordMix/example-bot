@@ -1,8 +1,8 @@
-import {Command, Context, Name, Description, Constraint} from "d.mix";
+import {Command, Context, name, description, Constraint} from "d.mix";
 
-@Name("hello")
-@Description("Say hello world")
-@Constraint.Cooldown(3) // Must wait 3 seconds between executions (per-user)
+@name("hello")
+@description("Say hello world")
+@Constraint.cooldown(3) // Must wait 3 seconds between executions (per-user)
 export default class extends Command {
     public async run($: Context): Promise<void> {
         await $.ok("Hello world"); // Success embed

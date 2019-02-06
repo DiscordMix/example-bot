@@ -23,7 +23,7 @@
     },
     "homepage": "https://github.com/discord-mix/example-bot#readme",
     "dependencies": {
-        "d.mix": "^1.2.5",
+        "d.mix": "^1.5.1-0",
         "dotenv": "^6.1.0"
     },
     "devDependencies": {

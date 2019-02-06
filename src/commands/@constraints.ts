@@ -1,11 +1,11 @@
-import {Command, Context, Permission, ChatEnv, RestrictGroup, Name, Description, Constraints, Constraint} from "d.mix";
+import {Command, Context, Permission, ChatEnv, RestrictGroup, name, description, Constraints, Constraint} from "d.mix";
 
 // Note: This command will not be loaded by Forge (as instructed by the leading @ in the command file name)
 // and only serves example/template purposes.
 
 // Basic information of the command:
-@Name("constraints")
-@Description("Example use of command constraints")
+@name("constraints")
+@description("Example use of command constraints")
 
 // Apply multiple constraints:
 @Constraints({
@@ -17,7 +17,7 @@ import {Command, Context, Permission, ChatEnv, RestrictGroup, Name, Description,
 })
 
 // If you need to apply just a single constraint:
-@Constraint.Cooldown(3)
+@Constraint.cooldown(3)
 export default class extends Command {
     public async run($: Context): Promise<void> {
         //
