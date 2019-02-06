@@ -1,4 +1,4 @@
-import {Command, Context, Permission, ChatEnv, RestrictGroup, name, description, Constraints, Constraint} from "d.mix";
+import {Command, Context, Permission, ChatEnv, RestrictGroup, name, description, constraints, Constraint} from "d.mix";
 
 // Note: This command will not be loaded by Forge (as instructed by the leading @ in the command file name)
 // and only serves example/template purposes.
@@ -8,7 +8,7 @@ import {Command, Context, Permission, ChatEnv, RestrictGroup, name, description,
 @description("Example use of command constraints")
 
 // Apply multiple constraints:
-@Constraints({
+@constraints({
     cooldown: 3, // Cooldown between executions in seconds (per-user).
     selfPermissions: [Permission.SendMessages], // Permission(s) required by the bot.
     issuerPermissions: [Permission.ManageMessages], // Permission(s) required by the executer.
