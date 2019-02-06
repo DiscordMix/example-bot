@@ -1,4 +1,4 @@
-import {Command, Context, Name, Description, Arguments, Type} from "d.mix";
+import {Command, Context, name, description, args, Type} from "d.mix";
 
 // Note: This command will not be loaded by Forge (as instructed by the leading @ in the command file name)
 // and only serves example/template purposes.
@@ -9,21 +9,21 @@ interface ILocalArgs {
 }
 
 // Basic information of the command:
-@Name("args")
-@Description("Example use of command arguments")
+@name("args")
+@description("Example use of command arguments")
 
 // Specify the command's arguments. Keep in mind that the order of the argument objects corresponds to the input order.
-@Arguments(
+@args(
     {
         // The name of the argument.
         name: "name",
 
         // The type of argument.
-        type: Type.String
+        type: Type.string
     },
     {
         name: "favoriteNumber",
-        type: Type.Integer
+        type: Type.integer
     }
 )
 export default class extends Command {

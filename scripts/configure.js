@@ -2,7 +2,7 @@
 
 const input = require("input");
 const fs = require("fs");
-const {Patterns} = require("d.mix");
+const {Pattern} = require("d.mix");
 
 if (!fs.existsSync(".env.example") && !fs.existsSync(".env")) {
     console.log("Seems like the project is corrupt, try downloading a fresh copy! (.env.example is missing)");
@@ -16,7 +16,7 @@ async function start() {
 
     const token = await input.password("Token", {
         validate(token) {
-            return Patterns.token.test(token);
+            return Pattern.token.test(token);
         }
     });
 
@@ -26,7 +26,7 @@ async function start() {
 
     const owner = await input.text("Owner's ID (Your ID)", {
         validate(id) {
-            return Patterns.snowflake.test(id);
+            return Pattern.snowflake.test(id);
         },
 
         default: "000000000000000000"
