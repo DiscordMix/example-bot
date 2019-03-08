@@ -29,7 +29,7 @@ interface ILocalArgs {
 export default class extends Command {
     // This command should be executed as follows: !args "john doe" 5
     public async run($: Context, args: ILocalArgs): Promise<void> {
-        args.name; // "john doe" (string)
-        args.favoriteNumber; // 5 (number)
+        args.name; // "john doe" (string).
+        args.favoriteNumber; // 5 (number).
     }
 };

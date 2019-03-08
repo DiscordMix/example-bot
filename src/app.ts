@@ -8,7 +8,7 @@ import {Env} from "./defs";
 
 // Verify that .env file exists (bot configuration).
 if (!fs.existsSync(".env")) {
-    console.log("Hold up! Your bot isn't configured. Run 'npm run config' to configure it. Alternatively, you can configure the .env file manually.");
+    console.log("Hold up! Your bot isn't configured. Run 'npm run config' to configure it. Alternatively, you can copy '.env.example' to '.env' configure the '.env' file manually.");
     process.exit(0);
 }
 
